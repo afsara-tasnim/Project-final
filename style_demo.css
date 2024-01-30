@@ -110,7 +110,7 @@ header {
   }
   #search-bar {
     padding: 10px;
-    width: 400px;
+    width: 250px;
     box-sizing: border-box;
     border: 1px solid #ced4da; /* Light border color */
     border-radius: 20px; /* Rounded corners */
