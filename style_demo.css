@@ -106,60 +106,49 @@ header {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1rem;
-    font-size: 16px;
+    font-size: 14px;
   }
-
+  #search-bar {
+    padding: 10px;
+    width: 400px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da; /* Light border color */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
   h2{
     font-family: 'Jost', sans-serif;
-    color: black;
+    color: rgb(79, 79, 79);
     padding: 5px;
     text-align: center;
   }
 
   th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #f3efef;
     padding: 12px;
     text-align: left;
   }
 
-  th {
-    background-color: #f2f2f2;
-  }
+  /* th {
+    background-color: #c4d2f0;
+  } */
 
   /* Responsive styles */
   @media only screen and (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
+
+    .table th, .table td {
+      padding: 5px;
+      font-size: 12px;
     }
 
-    th, td {
-      text-align: center;
-    }
-
-    th {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-
-    tr {
-      margin-bottom: 15px;
-    }
-
-    td {
-      border: none;
-      position: relative;
-      padding-left: 50%;
-    }
-
-    td:before {
-      position: absolute;
-      left: 6px;
-      content: attr(data-label);
+    .table tbody tr td[data-label="Brand"]::before,
+    .table tbody tr td[data-label="Name"]::before {
+      content: " ";
       font-weight: bold;
     }
        /* Additional styles for smaller screens */
-    .navmenu {
+       .navmenu {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -177,7 +166,10 @@ header {
     .menu-icon {
         display: block;
     }
-    .img {
+  }
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  img {
         max-width: 100%; /* Allow the image to take up the full width */
       }
-  }
+}
